@@ -18,7 +18,7 @@ const MOODS = [
 
 export const MoodSelector: React.FC<MoodSelectorProps> = ({ selectedMood, onSelect }) => {
     return (
-        <div className="flex flex-wrap gap-2 justify-center sm:justify-start">
+        <div className="flex flex-wrap gap-3 justify-center">
             {MOODS.map((mood) => (
                 <Button
                     key={mood.label}

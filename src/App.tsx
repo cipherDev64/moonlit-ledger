@@ -133,19 +133,19 @@ function App() {
   const displayContent = isViewingHistoryEntry ? selectedHistoryEntry.content : entryText;
 
   return (
-    <div className="min-h-screen p-4 md:p-8 transition-colors duration-300">
-      <header className="max-w-4xl mx-auto mb-8 flex justify-between items-center">
+    <div className="min-h-screen w-full flex flex-col items-center p-4 md:p-8 transition-colors duration-300">
+      <header className="w-full max-w-4xl mb-8 flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-4">
         <div>
-          <h1 className="text-4xl md:text-5xl text-ink-900 mb-1 tracking-tight" style={{ fontFamily: '"Cormorant Garamond", serif' }}>
+          <h1 className="text-5xl md:text-6xl text-ink-900 mb-2 tracking-tight font-serif">
             Moonlit Ledger
           </h1>
-          <p className="text-ink-800/60 font-serif italic">
+          <p className="text-ink-800/60 font-serif italic text-lg">
             {format(new Date(), 'EEEE, MMMM do, yyyy')}
           </p>
         </div>
         <div className="flex gap-2">
           <Button variant="ghost" size="icon" onClick={() => setDarkMode(!darkMode)} title="Toggle Theme">
-            {darkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+            {darkMode ? <Sun className="w-6 h-6" /> : <Moon className="w-6 h-6" />}
           </Button>
         </div>
       </header>
